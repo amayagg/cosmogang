@@ -75,10 +75,9 @@ oss"))
                 self.d_loss = self.d_loss_real + self.d_loss_fake
             
             with tf.name_scope("g"):
-                self.g_loss_real = -tf.reduce_mean(d_logits_real)
-                self.g_loss_fake = -tf.reduce_mean(d_logits_fake)
-                print(self.g_loss_real)
-                self.g_loss = self.g_loss_real + self.g_loss_fake
+                self.g_loss = -tf.reduce_mean(d_logits_fake)
+            
+            
             
         
         self.d_summary = tf.summary.merge([tf.summary.histogram("prob/real", d_prob_real),

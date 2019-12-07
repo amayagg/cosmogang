@@ -1,0 +1,107 @@
+{'?': <absl.app.HelpFlag object at 0x7f72a49a7f10>,
+ 'alsologtostderr': <absl.flags._flag.BooleanFlag object at 0x7f72b06842d0>,
+ 'batch_size': <absl.flags._flag.Flag object at 0x7f72a49a7b50>,
+ 'beta1': <absl.flags._flag.Flag object at 0x7f72a49a77d0>,
+ 'c_dim': <absl.flags._flag.Flag object at 0x7f72a49a7c50>,
+ 'checkpoint_dir': <absl.flags._flag.Flag object at 0x7f72a49a7d90>,
+ 'data_format': <absl.flags._flag.Flag object at 0x7f72a49a7cd0>,
+ 'datafile': <absl.flags._flag.Flag object at 0x7f72a49a7610>,
+ 'dataset': <absl.flags._flag.Flag object at 0x7f72a49a7490>,
+ 'df_dim': <absl.flags._flag.Flag object at 0x7f72a49a7ad0>,
+ 'epoch': <absl.flags._flag.Flag object at 0x7f72a49a7690>,
+ 'experiment': <absl.flags._flag.Flag object at 0x7f72a49a7e50>,
+ 'flip_labels': <absl.flags._flag.Flag object at 0x7f72a49a7850>,
+ 'gf_dim': <absl.flags._flag.Flag object at 0x7f72a49a7a50>,
+ 'help': <absl.app.HelpFlag object at 0x7f72a49a7f10>,
+ 'helpfull': <absl.app.HelpfullFlag object at 0x7f72a49a7f90>,
+ 'helpshort': <absl.app.HelpshortFlag object at 0x7f72a49a7f50>,
+ 'helpxml': <absl.app.HelpXMLFlag object at 0x7f72a49a7fd0>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7f72a49a7750>,
+ 'log_dir': <absl.flags._flag.Flag object at 0x7f72b0684390>,
+ 'logtostderr': <absl.flags._flag.BooleanFlag object at 0x7f72b06841d0>,
+ 'nd_layers': <absl.flags._flag.Flag object at 0x7f72a49a7950>,
+ 'ng_layers': <absl.flags._flag.Flag object at 0x7f72a49a79d0>,
+ 'only_check_args': <absl.flags._flag.BooleanFlag object at 0x7f72b0684ad0>,
+ 'op_conversion_fallback_to_while_loop': <absl.flags._flag.BooleanFlag object at 0x7f72aee24090>,
+ 'output_size': <absl.flags._flag.Flag object at 0x7f72a49a7bd0>,
+ 'pdb_post_mortem': <absl.flags._flag.BooleanFlag object at 0x7f72b0678650>,
+ 'profile_file': <absl.flags._flag.Flag object at 0x7f72b0684a50>,
+ 'run_with_pdb': <absl.flags._flag.BooleanFlag object at 0x7f72b067d190>,
+ 'run_with_profiling': <absl.flags._flag.BooleanFlag object at 0x7f72b0678cd0>,
+ 'save_every_step': <absl.flags._flag.BooleanFlag object at 0x7f72a49a7e90>,
+ 'showprefixforinfo': <absl.flags._flag.BooleanFlag object at 0x7f72b0684590>,
+ 'stderrthreshold': <absl.logging._StderrthresholdFlag object at 0x7f72b0684510>,
+ 'test_random_seed': <absl.flags._flag.Flag object at 0x7f72a4f1ffd0>,
+ 'test_randomize_ordering_seed': <absl.flags._flag.Flag object at 0x7f72a4f3bbd0>,
+ 'test_srcdir': <absl.flags._flag.Flag object at 0x7f72a4f33550>,
+ 'test_tmpdir': <absl.flags._flag.Flag object at 0x7f72a4f33dd0>,
+ 'transpose_matmul_b': <absl.flags._flag.BooleanFlag object at 0x7f72a49a7d10>,
+ 'use_cprofile_for_profiling': <absl.flags._flag.BooleanFlag object at 0x7f72b0684a90>,
+ 'v': <absl.logging._VerbosityFlag object at 0x7f72b06843d0>,
+ 'verbose': <absl.flags._flag.BooleanFlag object at 0x7f72a49a7ed0>,
+ 'verbosity': <absl.logging._VerbosityFlag object at 0x7f72b06843d0>,
+ 'xml_output_file': <absl.flags._flag.Flag object at 0x7f72a4edc190>,
+ 'z_dim': <absl.flags._flag.Flag object at 0x7f72a49a78d0>}
+(20, 256, 256)
+0.8459561
+-0.08896838
+Epoch: [ 0] Step: [   0/   4] time: 7.4085, d_loss: 4.24866390, g_loss: 2.27239394
+Epoch: [ 0] Step: [   1/   4] time: 7.7869, d_loss: 0.46864992, g_loss: 1.26350999
+Epoch: [ 0] Step: [   2/   4] time: 8.1677, d_loss: 0.79906231, g_loss: 0.26436159
+Epoch: [ 0] Step: [   3/   4] time: 8.5445, d_loss: 0.06853833, g_loss: 9.54102135
+Epoch: [ 1] Step: [   0/   4] time: 8.9184, d_loss: 0.27952117, g_loss: 12.61033058
+Epoch: [ 1] Step: [   1/   4] time: 9.2875, d_loss: 1.60641682, g_loss: 5.21448803
+Epoch: [ 1] Step: [   2/   4] time: 9.6587, d_loss: 1.56104636, g_loss: 3.78494334
+Epoch: [ 1] Step: [   3/   4] time: 10.0244, d_loss: 1.85527110, g_loss: 7.87258244
+Epoch: [ 2] Step: [   0/   4] time: 10.3907, d_loss: 0.02987571, g_loss: 16.71941757
+Epoch: [ 2] Step: [   1/   4] time: 10.7552, d_loss: 2.00570822, g_loss: 0.00418080
+Epoch: [ 2] Step: [   2/   4] time: 11.1196, d_loss: 0.00052094, g_loss: 13.73061371
+Epoch: [ 2] Step: [   3/   4] time: 11.4848, d_loss: 0.10175223, g_loss: 13.16468048
+Epoch: [ 3] Step: [   0/   4] time: 11.8514, d_loss: 5.47186947, g_loss: 3.09879446
+Epoch: [ 3] Step: [   1/   4] time: 12.2110, d_loss: 53.60569763, g_loss: 0.00000000
+Epoch: [ 3] Step: [   2/   4] time: 12.5715, d_loss: 3.18290353, g_loss: 1.11843264
+Epoch: [ 3] Step: [   3/   4] time: 12.9356, d_loss: 0.00000019, g_loss: 25.74815369
+Epoch: [ 4] Step: [   0/   4] time: 13.3038, d_loss: 0.00000230, g_loss: 34.93972397
+Epoch: [ 4] Step: [   1/   4] time: 13.6780, d_loss: 0.00000000, g_loss: 35.55333710
+Epoch: [ 4] Step: [   2/   4] time: 14.0406, d_loss: 17.33348656, g_loss: 4.93429470
+Epoch: [ 4] Step: [   3/   4] time: 14.4027, d_loss: 0.19484229, g_loss: 3.95774984
+Epoch: [ 5] Step: [   0/   4] time: 14.7695, d_loss: 1.58141935, g_loss: 23.22441483
+Epoch: [ 5] Step: [   1/   4] time: 15.1290, d_loss: 0.00000446, g_loss: 13.94586754
+Epoch: [ 5] Step: [   2/   4] time: 15.4880, d_loss: 48.88124084, g_loss: 5.44729662
+Epoch: [ 5] Step: [   3/   4] time: 15.8518, d_loss: 0.01092021, g_loss: 13.06549549
+Epoch: [ 6] Step: [   0/   4] time: 16.2184, d_loss: 2.65110326, g_loss: 10.76820278
+Epoch: [ 6] Step: [   1/   4] time: 16.5771, d_loss: 6.28672314, g_loss: 7.27717876
+Epoch: [ 6] Step: [   2/   4] time: 16.9363, d_loss: 0.12136245, g_loss: 29.13666153
+Epoch: [ 6] Step: [   3/   4] time: 17.3007, d_loss: 0.00056919, g_loss: 37.25584030
+Epoch: [ 7] Step: [   0/   4] time: 17.6668, d_loss: 0.00000001, g_loss: 30.47003174
+Epoch: [ 7] Step: [   1/   4] time: 18.0315, d_loss: 0.00220626, g_loss: 9.14968872
+Epoch: [ 7] Step: [   2/   4] time: 18.3905, d_loss: 0.12611668, g_loss: 15.35126686
+Epoch: [ 7] Step: [   3/   4] time: 18.7529, d_loss: 0.00027860, g_loss: 15.32423973
+Epoch: [ 8] Step: [   0/   4] time: 19.1183, d_loss: 0.05820728, g_loss: 20.44388199
+Epoch: [ 8] Step: [   1/   4] time: 19.4796, d_loss: 2.93289065, g_loss: 16.64730644
+Epoch: [ 8] Step: [   2/   4] time: 19.8429, d_loss: 2.75855041, g_loss: 7.18967056
+Epoch: [ 8] Step: [   3/   4] time: 20.2042, d_loss: 0.04411045, g_loss: 26.22465515
+Epoch: [ 9] Step: [   0/   4] time: 20.5666, d_loss: 0.24056372, g_loss: 25.65155029
+Epoch: [ 9] Step: [   1/   4] time: 20.9363, d_loss: 0.00016966, g_loss: 14.92083168
+Epoch: [ 9] Step: [   2/   4] time: 21.3022, d_loss: 4.07404089, g_loss: 11.74356747
+Epoch: [ 9] Step: [   3/   4] time: 21.6667, d_loss: 0.02387721, g_loss: 27.28167725
+Epoch: [10] Step: [   0/   4] time: 22.0330, d_loss: 0.00645020, g_loss: 34.50040817
+Epoch: [10] Step: [   1/   4] time: 22.3974, d_loss: 0.19307663, g_loss: 20.17554092
+Epoch: [10] Step: [   2/   4] time: 22.7618, d_loss: 0.35229990, g_loss: 14.85020256
+Epoch: [10] Step: [   3/   4] time: 23.1277, d_loss: 0.00002992, g_loss: 22.80615234
+Epoch: [11] Step: [   0/   4] time: 23.4911, d_loss: 2.77486205, g_loss: 11.20023918
+Epoch: [11] Step: [   1/   4] time: 23.8575, d_loss: 0.10166486, g_loss: 24.43951797
+Epoch: [11] Step: [   2/   4] time: 24.2206, d_loss: 1.74488378, g_loss: 0.95907468
+Epoch: [11] Step: [   3/   4] time: 24.5844, d_loss: 0.88859177, g_loss: 38.79917908
+Epoch: [12] Step: [   0/   4] time: 24.9511, d_loss: 0.00594812, g_loss: 44.14852905
+Epoch: [12] Step: [   1/   4] time: 25.3199, d_loss: 0.00091295, g_loss: 41.48338699
+Epoch: [12] Step: [   2/   4] time: 25.6850, d_loss: 1.02554297, g_loss: 28.49002457
+Epoch: [12] Step: [   3/   4] time: 26.0499, d_loss: 1.37923813, g_loss: 17.68298721
+Epoch: [13] Step: [   0/   4] time: 26.4120, d_loss: 0.03412661, g_loss: 4.21936893
+Epoch: [13] Step: [   1/   4] time: 26.7787, d_loss: 0.00112019, g_loss: 10.96478558
+Epoch: [13] Step: [   2/   4] time: 27.1465, d_loss: 0.08299275, g_loss: 40.83841705
+Epoch: [13] Step: [   3/   4] time: 27.5127, d_loss: 30.93988037, g_loss: 3.36241007
+Epoch: [14] Step: [   0/   4] time: 27.8805, d_loss: 6.12309313, g_loss: 37.16742706
+Epoch: [14] Step: [   1/   4] time: 28.2506, d_loss: 1.44671893, g_loss: 21.31719589
+Epoch: [14] Step: [   2/   4] time: 28.6144, d_loss: 8.21737194, g_loss: 10.64034843
+Epoch: [14] Step: [   3/   4] time: 28.9796, d_loss: 0.45818210, g_loss: 14.88498974

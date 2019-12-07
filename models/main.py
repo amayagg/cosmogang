@@ -34,7 +34,7 @@ def main(_):
 
 def get_data():
     data = np.load(config.datafile, mmap_mode='r')
-    data = data[:500]
+    #data = data[:500]
     #image = data[5]
 
     #x = Image.fromarray(image)

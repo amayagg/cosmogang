@@ -36,8 +36,15 @@ def train_dcgan(data, config):
             init_op = tf.global_variables_initializer()
             sess.run(init_op)
 
-            #load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, step=save_every_step)
+            load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, step=save_every_step, counter = 47)
+            '''
+            t_vars = tf.trainable_variables()
+            d_vars = [var for var in t_vars if 'discriminator/' in var.name]
+            g_vars = [var for var in t_vars if 'generator/' in var.name]
 
+            g_vars = [(sess.run(var), var.name) for var in g_vars]
+            d_vars = [(sess.run(var), var.name) for var in d_vars]
+            '''
             epoch = sess.run(gan.increment_epoch)
             start_time = time.time()
             for epoch in range(epoch, epoch + config.epoch):
