@@ -4,6 +4,14 @@ This file generates convergence maps from a GAN with pre-trained weights.
 Authors: Amay Aggarwal, Michel Dellepere, Andrew Ying
 """
 
+import tensorflow as tf
+from models import dcgan, utils
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as pltcolors
+
+checkpoint_dir = 'cosmoGAN_pretrained_weights'
+
 with tf.Graph().as_default() as g:
     with tf.Session(graph=g) as sess:
         gan = dcgan.dcgan(output_size=256,
