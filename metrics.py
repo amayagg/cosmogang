@@ -31,6 +31,11 @@ with tf.Graph().as_default() as g:
         samples_histogram, _ = np.histogram(samples.flatten(), bins=bin_edges)
 
         plt.figure()
+        plt.title('Pixel Intensity Metric')
+        plt.xlabel('Pixel value')
+        plt.ylabel('Counts')
+        plt.legend(loc='upper right')
+        plt.savefig('histo', format='png')
 
 # def pixel_intensity(validation_set, generator, noise_vector_length, inverse_transform, channel_axis):
 #     """First order metric: histogram of pixel intensities
