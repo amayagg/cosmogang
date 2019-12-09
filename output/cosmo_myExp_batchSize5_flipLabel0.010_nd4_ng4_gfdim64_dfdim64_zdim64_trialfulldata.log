@@ -1,0 +1,247 @@
+{'?': <absl.app.HelpFlag object at 0x7fe7d63834d0>,
+ 'alsologtostderr': <absl.flags._flag.BooleanFlag object at 0x7fe7e2053890>,
+ 'batch_size': <absl.flags._flag.Flag object at 0x7fe7d6383110>,
+ 'beta1': <absl.flags._flag.Flag object at 0x7fe7d637bd50>,
+ 'c_dim': <absl.flags._flag.Flag object at 0x7fe7d6383210>,
+ 'checkpoint_dir': <absl.flags._flag.Flag object at 0x7fe7d6383350>,
+ 'data_format': <absl.flags._flag.Flag object at 0x7fe7d6383290>,
+ 'datafile': <absl.flags._flag.Flag object at 0x7fe7d637bb90>,
+ 'dataset': <absl.flags._flag.Flag object at 0x7fe7d637ba10>,
+ 'df_dim': <absl.flags._flag.Flag object at 0x7fe7d6383090>,
+ 'epoch': <absl.flags._flag.Flag object at 0x7fe7d637bc10>,
+ 'experiment': <absl.flags._flag.Flag object at 0x7fe7d6383410>,
+ 'flip_labels': <absl.flags._flag.Flag object at 0x7fe7d637bdd0>,
+ 'gf_dim': <absl.flags._flag.Flag object at 0x7fe7d637bfd0>,
+ 'help': <absl.app.HelpFlag object at 0x7fe7d63834d0>,
+ 'helpfull': <absl.app.HelpfullFlag object at 0x7fe7d6383550>,
+ 'helpshort': <absl.app.HelpshortFlag object at 0x7fe7d6383510>,
+ 'helpxml': <absl.app.HelpXMLFlag object at 0x7fe7d6383590>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7fe7d637bcd0>,
+ 'log_dir': <absl.flags._flag.Flag object at 0x7fe7e2053950>,
+ 'logtostderr': <absl.flags._flag.BooleanFlag object at 0x7fe7e2053790>,
+ 'nd_layers': <absl.flags._flag.Flag object at 0x7fe7d637bed0>,
+ 'ng_layers': <absl.flags._flag.Flag object at 0x7fe7d637bf50>,
+ 'only_check_args': <absl.flags._flag.BooleanFlag object at 0x7fe7e1fe00d0>,
+ 'op_conversion_fallback_to_while_loop': <absl.flags._flag.BooleanFlag object at 0x7fe7e07f4650>,
+ 'output_size': <absl.flags._flag.Flag object at 0x7fe7d6383190>,
+ 'pdb_post_mortem': <absl.flags._flag.BooleanFlag object at 0x7fe7e204b750>,
+ 'profile_file': <absl.flags._flag.Flag object at 0x7fe7e1fe0050>,
+ 'run_with_pdb': <absl.flags._flag.BooleanFlag object at 0x7fe7e2048c10>,
+ 'run_with_profiling': <absl.flags._flag.BooleanFlag object at 0x7fe7e204b2d0>,
+ 'save_every_step': <absl.flags._flag.BooleanFlag object at 0x7fe7d6383450>,
+ 'showprefixforinfo': <absl.flags._flag.BooleanFlag object at 0x7fe7e2053b50>,
+ 'stderrthreshold': <absl.logging._StderrthresholdFlag object at 0x7fe7e2053ad0>,
+ 'test_random_seed': <absl.flags._flag.Flag object at 0x7fe7d68fe0d0>,
+ 'test_randomize_ordering_seed': <absl.flags._flag.Flag object at 0x7fe7d6912190>,
+ 'test_srcdir': <absl.flags._flag.Flag object at 0x7fe7d690d390>,
+ 'test_tmpdir': <absl.flags._flag.Flag object at 0x7fe7d690d4d0>,
+ 'transpose_matmul_b': <absl.flags._flag.BooleanFlag object at 0x7fe7d63832d0>,
+ 'use_cprofile_for_profiling': <absl.flags._flag.BooleanFlag object at 0x7fe7e1fe0090>,
+ 'v': <absl.logging._VerbosityFlag object at 0x7fe7e2053990>,
+ 'verbose': <absl.flags._flag.BooleanFlag object at 0x7fe7d6383490>,
+ 'verbosity': <absl.logging._VerbosityFlag object at 0x7fe7e2053990>,
+ 'xml_output_file': <absl.flags._flag.Flag object at 0x7fe7d68a8710>,
+ 'z_dim': <absl.flags._flag.Flag object at 0x7fe7d637be50>}
+(1000, 1024, 1024)
+1.4988794
+-0.099815674
+Epoch: [ 0] Step: [   0/ 200] time: 62.7795, d_loss: 11.42215252, g_loss: 21.34828186
+Epoch: [ 0] Step: [   1/ 200] time: 68.7948, d_loss: 18.47719002, g_loss: 13.17077065
+Epoch: [ 0] Step: [   2/ 200] time: 74.8626, d_loss: 15.96259499, g_loss: 9.25017738
+Epoch: [ 0] Step: [   3/ 200] time: 80.8783, d_loss: 19.63696861, g_loss: 14.62388802
+Epoch: [ 0] Step: [   4/ 200] time: 86.7582, d_loss: 33.29922485, g_loss: 44.02303314
+Epoch: [ 0] Step: [   5/ 200] time: 92.8186, d_loss: 16.13962173, g_loss: 51.29089355
+Epoch: [ 0] Step: [   6/ 200] time: 98.8851, d_loss: 52.20920944, g_loss: 8.76296329
+Epoch: [ 0] Step: [   7/ 200] time: 104.9871, d_loss: 16.93670082, g_loss: 13.69731426
+Epoch: [ 0] Step: [   8/ 200] time: 111.0480, d_loss: 24.57540512, g_loss: 3.21908498
+Epoch: [ 0] Step: [   9/ 200] time: 117.1381, d_loss: 70.31938171, g_loss: 0.00000000
+Epoch: [ 0] Step: [  10/ 200] time: 123.3998, d_loss: 74.68359375, g_loss: 24.40631294
+Epoch: [ 0] Step: [  11/ 200] time: 129.4792, d_loss: 53.70001984, g_loss: 8.07926750
+Epoch: [ 0] Step: [  12/ 200] time: 135.6592, d_loss: 39.59308624, g_loss: 15.57036781
+Epoch: [ 0] Step: [  13/ 200] time: 141.7067, d_loss: 84.75128937, g_loss: 27.63980103
+Epoch: [ 0] Step: [  14/ 200] time: 147.6773, d_loss: 38.40012360, g_loss: 67.41516113
+Epoch: [ 0] Step: [  15/ 200] time: 154.0128, d_loss: 52.15065765, g_loss: 17.51320076
+Epoch: [ 0] Step: [  16/ 200] time: 160.1887, d_loss: 98.09187317, g_loss: 2.18458462
+Epoch: [ 0] Step: [  17/ 200] time: 166.3463, d_loss: 59.76355743, g_loss: 0.00000000
+Epoch: [ 0] Step: [  18/ 200] time: 172.5291, d_loss: 10.31536674, g_loss: 72.32494354
+Epoch: [ 0] Step: [  19/ 200] time: 178.5180, d_loss: 145.89015198, g_loss: 9.54330349
+Epoch: [ 0] Step: [  20/ 200] time: 184.8251, d_loss: 21.23397446, g_loss: 0.00000008
+Epoch: [ 0] Step: [  21/ 200] time: 191.0856, d_loss: 2.02756429, g_loss: 80.38407135
+Epoch: [ 0] Step: [  22/ 200] time: 197.3239, d_loss: 133.69328308, g_loss: 0.00000015
+Epoch: [ 0] Step: [  23/ 200] time: 203.3923, d_loss: 95.82280731, g_loss: 10.57494831
+Epoch: [ 0] Step: [  24/ 200] time: 209.7937, d_loss: 42.05359650, g_loss: 88.65600586
+Epoch: [ 0] Step: [  25/ 200] time: 215.9832, d_loss: 0.50325626, g_loss: 39.74618149
+Epoch: [ 0] Step: [  26/ 200] time: 222.0443, d_loss: 33.03624725, g_loss: 51.32762527
+Epoch: [ 0] Step: [  27/ 200] time: 228.2527, d_loss: 0.00000059, g_loss: 57.62746429
+Epoch: [ 0] Step: [  28/ 200] time: 234.5342, d_loss: 51.50714111, g_loss: 6.58673477
+Epoch: [ 0] Step: [  29/ 200] time: 240.6472, d_loss: 114.87419128, g_loss: 0.00000000
+Epoch: [ 0] Step: [  30/ 200] time: 246.9180, d_loss: 29.79049683, g_loss: 101.08692932
+Epoch: [ 0] Step: [  31/ 200] time: 252.9902, d_loss: 1.10438561, g_loss: 31.78253746
+Epoch: [ 0] Step: [  32/ 200] time: 259.4245, d_loss: 46.79547882, g_loss: 0.00000000
+Epoch: [ 0] Step: [  33/ 200] time: 265.5886, d_loss: 24.16750336, g_loss: 43.59683228
+Epoch: [ 0] Step: [  34/ 200] time: 271.8904, d_loss: 75.14874268, g_loss: 0.00000000
+Epoch: [ 0] Step: [  35/ 200] time: 278.0025, d_loss: 4.09021997, g_loss: 111.56623840
+Epoch: [ 0] Step: [  36/ 200] time: 284.3203, d_loss: 5.44242954, g_loss: 28.80813599
+Epoch: [ 0] Step: [  37/ 200] time: 290.5411, d_loss: 12.32426643, g_loss: 166.11477661
+Epoch: [ 0] Step: [  38/ 200] time: 296.7449, d_loss: 0.00000000, g_loss: 0.00503488
+Epoch: [ 0] Step: [  39/ 200] time: 302.7134, d_loss: 289.25518799, g_loss: 0.00000000
+Epoch: [ 0] Step: [  40/ 200] time: 308.8412, d_loss: 0.00000000, g_loss: 187.54150391
+Epoch: [ 0] Step: [  41/ 200] time: 315.0376, d_loss: 0.00916366, g_loss: 108.05281830
+Epoch: [ 0] Step: [  42/ 200] time: 321.2279, d_loss: 10.93236923, g_loss: 176.74551392
+Epoch: [ 0] Step: [  43/ 200] time: 327.3553, d_loss: 88.05068207, g_loss: 11.75441837
+Epoch: [ 0] Step: [  44/ 200] time: 333.6133, d_loss: 0.00000303, g_loss: 144.75047302
+Epoch: [ 0] Step: [  45/ 200] time: 339.9816, d_loss: 12.04127312, g_loss: 78.55641174
+Epoch: [ 0] Step: [  46/ 200] time: 346.0966, d_loss: 11.76378632, g_loss: 36.06908798
+Epoch: [ 0] Step: [  47/ 200] time: 352.1180, d_loss: 26.03602600, g_loss: 304.36932373
+Epoch: [ 0] Step: [  48/ 200] time: 358.3208, d_loss: 0.92013347, g_loss: 215.56600952
+Epoch: [ 0] Step: [  49/ 200] time: 364.2645, d_loss: 126.53753662, g_loss: 7.92497635
+Epoch: [ 0] Step: [  50/ 200] time: 370.3475, d_loss: 0.03454272, g_loss: 96.70682526
+Epoch: [ 0] Step: [  51/ 200] time: 376.4962, d_loss: 0.00000012, g_loss: 209.53816223
+Epoch: [ 0] Step: [  52/ 200] time: 382.9388, d_loss: 2.80055666, g_loss: 31.24505997
+Epoch: [ 0] Step: [  53/ 200] time: 388.9674, d_loss: 109.78086853, g_loss: 0.00000000
+Epoch: [ 0] Step: [  54/ 200] time: 394.9497, d_loss: 75.74343109, g_loss: 582.02319336
+Epoch: [ 0] Step: [  55/ 200] time: 401.1921, d_loss: 0.00000000, g_loss: 535.44635010
+Epoch: [ 0] Step: [  56/ 200] time: 407.3334, d_loss: 0.00000000, g_loss: 331.23809814
+Epoch: [ 0] Step: [  57/ 200] time: 413.5704, d_loss: 0.00000038, g_loss: 23.62120628
+Epoch: [ 0] Step: [  58/ 200] time: 419.5758, d_loss: 0.00000000, g_loss: 175.67013550
+Epoch: [ 0] Step: [  59/ 200] time: 425.8673, d_loss: 23.61671066, g_loss: 11.01859665
+Epoch: [ 0] Step: [  60/ 200] time: 431.9987, d_loss: 178.86529541, g_loss: 0.00000000
+Epoch: [ 0] Step: [  61/ 200] time: 438.0364, d_loss: 51.59822845, g_loss: 702.73486328
+Epoch: [ 0] Step: [  62/ 200] time: 444.0596, d_loss: 0.00000000, g_loss: 632.06182861
+Epoch: [ 0] Step: [  63/ 200] time: 450.0814, d_loss: 0.00000000, g_loss: 555.47418213
+Epoch: [ 0] Step: [  64/ 200] time: 456.1456, d_loss: 0.00000000, g_loss: 392.69757080
+Epoch: [ 0] Step: [  65/ 200] time: 462.4066, d_loss: 0.00000000, g_loss: 69.15058899
+Epoch: [ 0] Step: [  66/ 200] time: 468.6433, d_loss: 52.44548416, g_loss: 51.03737259
+Epoch: [ 0] Step: [  67/ 200] time: 474.6133, d_loss: 0.00000000, g_loss: 290.15435791
+Epoch: [ 0] Step: [  68/ 200] time: 480.6590, d_loss: 0.00000000, g_loss: 531.65197754
+Epoch: [ 0] Step: [  69/ 200] time: 486.6202, d_loss: 0.00000000, g_loss: 308.95300293
+Epoch: [ 0] Step: [  70/ 200] time: 492.9241, d_loss: 0.00000000, g_loss: 268.64825439
+Epoch: [ 0] Step: [  71/ 200] time: 499.0693, d_loss: 0.00000000, g_loss: 213.54415894
+Epoch: [ 0] Step: [  72/ 200] time: 505.5332, d_loss: 5.19842815, g_loss: 122.70510101
+Epoch: [ 0] Step: [  73/ 200] time: 511.6968, d_loss: 0.00000000, g_loss: 131.79267883
+Epoch: [ 0] Step: [  74/ 200] time: 517.7835, d_loss: 12.54104042, g_loss: 653.56787109
+Epoch: [ 0] Step: [  75/ 200] time: 523.8930, d_loss: 0.00000000, g_loss: 725.02038574
+Epoch: [ 0] Step: [  76/ 200] time: 530.0633, d_loss: 0.00000000, g_loss: 610.25378418
+Epoch: [ 0] Step: [  77/ 200] time: 536.1180, d_loss: 0.00000000, g_loss: 447.85675049
+Epoch: [ 0] Step: [  78/ 200] time: 542.4302, d_loss: 0.00000000, g_loss: 223.68038940
+Epoch: [ 0] Step: [  79/ 200] time: 548.4947, d_loss: 0.00000000, g_loss: 322.18099976
+Epoch: [ 0] Step: [  80/ 200] time: 554.5438, d_loss: 3.03832173, g_loss: 257.13897705
+Epoch: [ 0] Step: [  81/ 200] time: 560.5390, d_loss: 16.14723778, g_loss: 34.45501709
+Epoch: [ 0] Step: [  82/ 200] time: 566.9564, d_loss: 0.00004289, g_loss: 269.16766357
+Epoch: [ 0] Step: [  83/ 200] time: 573.0816, d_loss: 9.70569038, g_loss: 338.40274048
+Epoch: [ 0] Step: [  84/ 200] time: 579.3027, d_loss: 0.00000000, g_loss: 341.43438721
+Epoch: [ 0] Step: [  85/ 200] time: 585.4464, d_loss: 0.00000000, g_loss: 317.92660522
+Epoch: [ 0] Step: [  86/ 200] time: 591.7013, d_loss: 0.00000000, g_loss: 234.75216675
+Epoch: [ 0] Step: [  87/ 200] time: 597.7768, d_loss: 36.04402542, g_loss: 103.41441345
+Epoch: [ 0] Step: [  88/ 200] time: 603.8306, d_loss: 0.00000000, g_loss: 281.70147705
+Epoch: [ 0] Step: [  89/ 200] time: 609.9966, d_loss: 51.86505127, g_loss: 189.47836304
+Epoch: [ 0] Step: [  90/ 200] time: 616.0293, d_loss: 115.41899109, g_loss: 168.51835632
+Epoch: [ 0] Step: [  91/ 200] time: 622.0662, d_loss: 0.00000000, g_loss: 132.76383972
+Epoch: [ 0] Step: [  92/ 200] time: 628.2136, d_loss: 0.23618391, g_loss: 399.06820679
+Epoch: [ 0] Step: [  93/ 200] time: 634.4893, d_loss: 11.89206123, g_loss: 488.69561768
+Epoch: [ 0] Step: [  94/ 200] time: 640.6325, d_loss: 0.00000000, g_loss: 455.00399780
+Epoch: [ 0] Step: [  95/ 200] time: 646.5850, d_loss: 0.00000000, g_loss: 349.71304321
+Epoch: [ 0] Step: [  96/ 200] time: 652.5828, d_loss: 0.00000000, g_loss: 248.66625977
+Epoch: [ 0] Step: [  97/ 200] time: 658.7700, d_loss: 523.25665283, g_loss: 364.96148682
+Epoch: [ 0] Step: [  98/ 200] time: 664.8863, d_loss: 59.82413483, g_loss: 94.88921356
+Epoch: [ 0] Step: [  99/ 200] time: 670.7334, d_loss: 0.00000000, g_loss: 944.86682129
+Epoch: [ 0] Step: [ 100/ 200] time: 676.9455, d_loss: 0.00000000, g_loss: 1037.63610840
+Epoch: [ 0] Step: [ 101/ 200] time: 683.0859, d_loss: 40.98360443, g_loss: 628.41027832
+Epoch: [ 0] Step: [ 102/ 200] time: 689.3210, d_loss: 0.00000000, g_loss: 369.35601807
+Epoch: [ 0] Step: [ 103/ 200] time: 695.3655, d_loss: 0.00000000, g_loss: 311.87365723
+Epoch: [ 0] Step: [ 104/ 200] time: 701.5587, d_loss: 0.50491399, g_loss: 150.77088928
+Epoch: [ 0] Step: [ 105/ 200] time: 707.7138, d_loss: 0.37978649, g_loss: 532.99047852
+Epoch: [ 0] Step: [ 106/ 200] time: 713.8915, d_loss: 292.70385742, g_loss: 0.00000000
+Epoch: [ 0] Step: [ 107/ 200] time: 719.9588, d_loss: 0.00000000, g_loss: 1036.80590820
+Epoch: [ 0] Step: [ 108/ 200] time: 726.2007, d_loss: 0.00000000, g_loss: 879.50799561
+Epoch: [ 0] Step: [ 109/ 200] time: 732.2884, d_loss: 0.00000000, g_loss: 707.75866699
+Epoch: [ 0] Step: [ 110/ 200] time: 738.2619, d_loss: 0.00000000, g_loss: 762.11102295
+Epoch: [ 0] Step: [ 111/ 200] time: 744.2416, d_loss: 0.00000000, g_loss: 399.42636108
+Epoch: [ 0] Step: [ 112/ 200] time: 750.3682, d_loss: 215.94033813, g_loss: 230.26054382
+Epoch: [ 0] Step: [ 113/ 200] time: 756.5452, d_loss: 0.00000000, g_loss: 341.33404541
+Epoch: [ 0] Step: [ 114/ 200] time: 762.7182, d_loss: 0.00000000, g_loss: 955.85803223
+Epoch: [ 0] Step: [ 115/ 200] time: 768.8292, d_loss: 24.97289658, g_loss: 96.77346039
+Epoch: [ 0] Step: [ 116/ 200] time: 774.9386, d_loss: 0.00000000, g_loss: 770.71978760
+Epoch: [ 0] Step: [ 117/ 200] time: 781.1003, d_loss: 9.04852581, g_loss: 882.68225098
+Epoch: [ 0] Step: [ 118/ 200] time: 787.1026, d_loss: 0.00000000, g_loss: 740.35333252
+Epoch: [ 0] Step: [ 119/ 200] time: 793.1281, d_loss: 0.00000000, g_loss: 1026.01306152
+Epoch: [ 0] Step: [ 120/ 200] time: 799.3347, d_loss: 0.00000000, g_loss: 405.17007446
+Epoch: [ 0] Step: [ 121/ 200] time: 805.3650, d_loss: 0.00000000, g_loss: 546.85949707
+Epoch: [ 0] Step: [ 122/ 200] time: 811.6917, d_loss: 0.00000000, g_loss: 966.93273926
+Epoch: [ 0] Step: [ 123/ 200] time: 817.7877, d_loss: 0.00000000, g_loss: 746.21276855
+Epoch: [ 0] Step: [ 124/ 200] time: 823.9386, d_loss: 0.02359566, g_loss: 281.62451172
+Epoch: [ 0] Step: [ 125/ 200] time: 830.0899, d_loss: 0.00000000, g_loss: 899.26916504
+Epoch: [ 0] Step: [ 126/ 200] time: 836.2256, d_loss: 0.00000000, g_loss: 673.81652832
+Epoch: [ 0] Step: [ 127/ 200] time: 842.2290, d_loss: 0.00000000, g_loss: 915.26531982
+Epoch: [ 0] Step: [ 128/ 200] time: 848.3326, d_loss: 0.00000000, g_loss: 720.37225342
+Epoch: [ 0] Step: [ 129/ 200] time: 854.5160, d_loss: 0.00000000, g_loss: 986.82043457
+Epoch: [ 0] Step: [ 130/ 200] time: 860.7015, d_loss: 982.61706543, g_loss: 249.01138306
+Epoch: [ 0] Step: [ 131/ 200] time: 866.6237, d_loss: 427.65206909, g_loss: 0.00000000
+Epoch: [ 0] Step: [ 132/ 200] time: 872.7673, d_loss: 0.00000000, g_loss: 272.85394287
+Epoch: [ 0] Step: [ 133/ 200] time: 878.5792, d_loss: 102.69374847, g_loss: 0.00000000
+Epoch: [ 0] Step: [ 134/ 200] time: 884.9468, d_loss: 189.04260254, g_loss: 36.38790894
+Epoch: [ 0] Step: [ 135/ 200] time: 890.9350, d_loss: 9.57833099, g_loss: 716.22155762
+Epoch: [ 0] Step: [ 136/ 200] time: 897.0833, d_loss: 0.00000000, g_loss: 557.98291016
+Epoch: [ 0] Step: [ 137/ 200] time: 903.1242, d_loss: 0.00000000, g_loss: 304.45941162
+Epoch: [ 0] Step: [ 138/ 200] time: 909.2378, d_loss: 0.00000000, g_loss: 255.21817017
+Epoch: [ 0] Step: [ 139/ 200] time: 915.3382, d_loss: 0.00000000, g_loss: 521.85864258
+Epoch: [ 0] Step: [ 140/ 200] time: 921.4867, d_loss: 0.00000000, g_loss: 299.35345459
+Epoch: [ 0] Step: [ 141/ 200] time: 927.7018, d_loss: 0.00000000, g_loss: 673.18182373
+Epoch: [ 0] Step: [ 142/ 200] time: 933.7465, d_loss: 91.60819244, g_loss: 49.98482513
+Epoch: [ 0] Step: [ 143/ 200] time: 939.8857, d_loss: 80.83455658, g_loss: 534.61181641
+Epoch: [ 0] Step: [ 144/ 200] time: 945.9655, d_loss: 0.00000000, g_loss: 692.15576172
+Epoch: [ 0] Step: [ 145/ 200] time: 951.8885, d_loss: 20.04639244, g_loss: 88.20014191
+Epoch: [ 0] Step: [ 146/ 200] time: 958.1185, d_loss: 0.00000000, g_loss: 440.15609741
+Epoch: [ 0] Step: [ 147/ 200] time: 964.3750, d_loss: 0.00000000, g_loss: 1150.30297852
+Epoch: [ 0] Step: [ 148/ 200] time: 970.4137, d_loss: 0.00000000, g_loss: 1092.61547852
+Epoch: [ 0] Step: [ 149/ 200] time: 976.3959, d_loss: 0.00000000, g_loss: 509.32104492
+Epoch: [ 0] Step: [ 150/ 200] time: 982.4167, d_loss: 0.00000000, g_loss: 1187.73413086
+Epoch: [ 0] Step: [ 151/ 200] time: 988.3113, d_loss: 0.00000000, g_loss: 1088.81811523
+Epoch: [ 0] Step: [ 152/ 200] time: 994.3413, d_loss: 0.00000000, g_loss: 726.12902832
+Epoch: [ 0] Step: [ 153/ 200] time: 1000.2658, d_loss: 0.00000000, g_loss: 176.25723267
+Epoch: [ 0] Step: [ 154/ 200] time: 1006.4071, d_loss: 8.05527306, g_loss: 1093.80346680
+Epoch: [ 0] Step: [ 155/ 200] time: 1012.3478, d_loss: 0.00000000, g_loss: 783.76025391
+Epoch: [ 0] Step: [ 156/ 200] time: 1018.4452, d_loss: 0.00000000, g_loss: 884.42980957
+Epoch: [ 0] Step: [ 157/ 200] time: 1024.4569, d_loss: 0.00000000, g_loss: 766.89404297
+Epoch: [ 0] Step: [ 158/ 200] time: 1030.6225, d_loss: 289.83905029, g_loss: 0.00000000
+Epoch: [ 0] Step: [ 159/ 200] time: 1036.5917, d_loss: 94.47303772, g_loss: 1302.37683105
+Epoch: [ 0] Step: [ 160/ 200] time: 1042.6729, d_loss: 0.00000000, g_loss: 1128.82714844
+Epoch: [ 0] Step: [ 161/ 200] time: 1048.6385, d_loss: 0.00000000, g_loss: 801.47131348
+Epoch: [ 0] Step: [ 162/ 200] time: 1054.6865, d_loss: 0.00000000, g_loss: 520.62231445
+Epoch: [ 0] Step: [ 163/ 200] time: 1060.7892, d_loss: 814.07214355, g_loss: 0.00000000
+Epoch: [ 0] Step: [ 164/ 200] time: 1066.7198, d_loss: 158.79907227, g_loss: 1061.78686523
+Epoch: [ 0] Step: [ 165/ 200] time: 1072.7649, d_loss: 0.00000000, g_loss: 831.08459473
+Epoch: [ 0] Step: [ 166/ 200] time: 1078.8584, d_loss: 0.00000000, g_loss: 743.30718994
+Epoch: [ 0] Step: [ 167/ 200] time: 1085.0676, d_loss: 0.00000000, g_loss: 607.98388672
+Epoch: [ 0] Step: [ 168/ 200] time: 1091.2166, d_loss: 0.00000000, g_loss: 1016.72784424
+Epoch: [ 0] Step: [ 169/ 200] time: 1097.2091, d_loss: 0.00000000, g_loss: 717.16027832
+Epoch: [ 0] Step: [ 170/ 200] time: 1103.2716, d_loss: 24.08532715, g_loss: 138.96365356
+Epoch: [ 0] Step: [ 171/ 200] time: 1109.3520, d_loss: 0.00000000, g_loss: 1290.05175781
+Epoch: [ 0] Step: [ 172/ 200] time: 1115.3672, d_loss: 27.29824257, g_loss: 1348.81298828
+Epoch: [ 0] Step: [ 173/ 200] time: 1121.3629, d_loss: 0.00000000, g_loss: 1093.31494141
+Epoch: [ 0] Step: [ 174/ 200] time: 1127.4706, d_loss: 0.00000000, g_loss: 1044.24670410
+Epoch: [ 0] Step: [ 175/ 200] time: 1133.3402, d_loss: 0.00000000, g_loss: 879.93688965
+Epoch: [ 0] Step: [ 176/ 200] time: 1139.4022, d_loss: 0.00000000, g_loss: 643.41149902
+Epoch: [ 0] Step: [ 177/ 200] time: 1145.3908, d_loss: 0.00000000, g_loss: 297.58273315
+Epoch: [ 0] Step: [ 178/ 200] time: 1151.2502, d_loss: 0.00000000, g_loss: 794.30145264
+Epoch: [ 0] Step: [ 179/ 200] time: 1157.4130, d_loss: 0.00000000, g_loss: 393.44134521
+Epoch: [ 0] Step: [ 180/ 200] time: 1163.5696, d_loss: 0.00000000, g_loss: 1065.21813965
+Epoch: [ 0] Step: [ 181/ 200] time: 1169.6027, d_loss: 0.00000000, g_loss: 994.88183594
+Epoch: [ 0] Step: [ 182/ 200] time: 1175.8193, d_loss: 395.38909912, g_loss: 0.00000000
+Epoch: [ 0] Step: [ 183/ 200] time: 1181.7876, d_loss: 125.55177307, g_loss: 1296.55725098
+Epoch: [ 0] Step: [ 184/ 200] time: 1187.8847, d_loss: 0.00000000, g_loss: 1259.16845703
+Epoch: [ 0] Step: [ 185/ 200] time: 1193.9889, d_loss: 0.00000000, g_loss: 716.67492676
+Epoch: [ 0] Step: [ 186/ 200] time: 1200.1289, d_loss: 0.00000000, g_loss: 530.42199707
+Epoch: [ 0] Step: [ 187/ 200] time: 1206.3153, d_loss: 0.00000000, g_loss: 485.60897827
+Epoch: [ 0] Step: [ 188/ 200] time: 1212.3587, d_loss: 0.00000000, g_loss: 880.23095703
+Epoch: [ 0] Step: [ 189/ 200] time: 1218.4080, d_loss: 0.00000000, g_loss: 991.30828857
+Epoch: [ 0] Step: [ 190/ 200] time: 1224.5926, d_loss: 0.00000000, g_loss: 757.26049805
+Epoch: [ 0] Step: [ 191/ 200] time: 1230.5970, d_loss: 0.00000000, g_loss: 830.68078613
+Epoch: [ 0] Step: [ 192/ 200] time: 1236.7323, d_loss: 0.00000000, g_loss: 541.72052002
+Epoch: [ 0] Step: [ 193/ 200] time: 1242.7392, d_loss: 0.00000000, g_loss: 111.24971008
+Epoch: [ 0] Step: [ 194/ 200] time: 1248.9673, d_loss: 0.00000000, g_loss: 535.98718262
+Epoch: [ 0] Step: [ 195/ 200] time: 1254.9820, d_loss: 0.00000000, g_loss: 541.33801270
+Epoch: [ 0] Step: [ 196/ 200] time: 1261.1159, d_loss: 0.00000000, g_loss: 530.82281494
+Epoch: [ 0] Step: [ 197/ 200] time: 1267.0706, d_loss: 0.00000098, g_loss: 365.07659912
+Epoch: [ 0] Step: [ 198/ 200] time: 1273.1523, d_loss: 0.00000001, g_loss: 617.06182861
+Epoch: [ 0] Step: [ 199/ 200] time: 1279.3359, d_loss: 0.00000000, g_loss: 188.31576538

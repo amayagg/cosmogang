@@ -1,0 +1,64 @@
+{'?': <absl.app.HelpFlag object at 0x7f5930c7e510>,
+ 'alsologtostderr': <absl.flags._flag.BooleanFlag object at 0x7f593c94e8d0>,
+ 'batch_size': <absl.flags._flag.Flag object at 0x7f5930c7e150>,
+ 'beta1': <absl.flags._flag.Flag object at 0x7f5930c76d90>,
+ 'c_dim': <absl.flags._flag.Flag object at 0x7f5930c7e250>,
+ 'checkpoint_dir': <absl.flags._flag.Flag object at 0x7f5930c7e390>,
+ 'data_format': <absl.flags._flag.Flag object at 0x7f5930c7e2d0>,
+ 'datafile': <absl.flags._flag.Flag object at 0x7f5930c76bd0>,
+ 'dataset': <absl.flags._flag.Flag object at 0x7f5930c76a50>,
+ 'df_dim': <absl.flags._flag.Flag object at 0x7f5930c7e0d0>,
+ 'epoch': <absl.flags._flag.Flag object at 0x7f5930c76c50>,
+ 'experiment': <absl.flags._flag.Flag object at 0x7f5930c7e450>,
+ 'flip_labels': <absl.flags._flag.Flag object at 0x7f5930c76e10>,
+ 'gf_dim': <absl.flags._flag.Flag object at 0x7f5930c7e050>,
+ 'help': <absl.app.HelpFlag object at 0x7f5930c7e510>,
+ 'helpfull': <absl.app.HelpfullFlag object at 0x7f5930c7e590>,
+ 'helpshort': <absl.app.HelpshortFlag object at 0x7f5930c7e550>,
+ 'helpxml': <absl.app.HelpXMLFlag object at 0x7f5930c7e5d0>,
+ 'learning_rate': <absl.flags._flag.Flag object at 0x7f5930c76d10>,
+ 'log_dir': <absl.flags._flag.Flag object at 0x7f593c94e990>,
+ 'logtostderr': <absl.flags._flag.BooleanFlag object at 0x7f593c94e7d0>,
+ 'nd_layers': <absl.flags._flag.Flag object at 0x7f5930c76f10>,
+ 'ng_layers': <absl.flags._flag.Flag object at 0x7f5930c76f90>,
+ 'only_check_args': <absl.flags._flag.BooleanFlag object at 0x7f593c8db110>,
+ 'op_conversion_fallback_to_while_loop': <absl.flags._flag.BooleanFlag object at 0x7f593b0ef690>,
+ 'output_size': <absl.flags._flag.Flag object at 0x7f5930c7e1d0>,
+ 'pdb_post_mortem': <absl.flags._flag.BooleanFlag object at 0x7f593c946790>,
+ 'profile_file': <absl.flags._flag.Flag object at 0x7f593c8db090>,
+ 'run_with_pdb': <absl.flags._flag.BooleanFlag object at 0x7f593c943c50>,
+ 'run_with_profiling': <absl.flags._flag.BooleanFlag object at 0x7f593c946310>,
+ 'save_every_step': <absl.flags._flag.BooleanFlag object at 0x7f5930c7e490>,
+ 'showprefixforinfo': <absl.flags._flag.BooleanFlag object at 0x7f593c94eb90>,
+ 'stderrthreshold': <absl.logging._StderrthresholdFlag object at 0x7f593c94eb10>,
+ 'test_random_seed': <absl.flags._flag.Flag object at 0x7f59311f9110>,
+ 'test_randomize_ordering_seed': <absl.flags._flag.Flag object at 0x7f593120d1d0>,
+ 'test_srcdir': <absl.flags._flag.Flag object at 0x7f59312083d0>,
+ 'test_tmpdir': <absl.flags._flag.Flag object at 0x7f5931208510>,
+ 'transpose_matmul_b': <absl.flags._flag.BooleanFlag object at 0x7f5930c7e310>,
+ 'use_cprofile_for_profiling': <absl.flags._flag.BooleanFlag object at 0x7f593c8db0d0>,
+ 'v': <absl.logging._VerbosityFlag object at 0x7f593c94e9d0>,
+ 'verbose': <absl.flags._flag.BooleanFlag object at 0x7f5930c7e4d0>,
+ 'verbosity': <absl.logging._VerbosityFlag object at 0x7f593c94e9d0>,
+ 'xml_output_file': <absl.flags._flag.Flag object at 0x7f59311a3750>,
+ 'z_dim': <absl.flags._flag.Flag object at 0x7f5930c76e90>}
+Epoch: [ 0] Step: [   0/  20] time: 62.6553, d_loss: 33.94641113, g_loss: 14.43437672
+Epoch: [ 0] Step: [   1/  20] time: 68.7036, d_loss: 6.16493416, g_loss: 35.02479553
+Epoch: [ 0] Step: [   2/  20] time: 74.8002, d_loss: 6.05077982, g_loss: 14.69533062
+Epoch: [ 0] Step: [   3/  20] time: 80.8170, d_loss: 17.50269127, g_loss: 7.37716389
+Epoch: [ 0] Step: [   4/  20] time: 86.8168, d_loss: 27.16156006, g_loss: 13.21422005
+Epoch: [ 0] Step: [   5/  20] time: 92.9798, d_loss: 27.25706863, g_loss: 8.26026344
+Epoch: [ 0] Step: [   6/  20] time: 99.0300, d_loss: 17.42066193, g_loss: 19.97013855
+Epoch: [ 0] Step: [   7/  20] time: 105.1453, d_loss: 9.54225159, g_loss: 28.86858559
+Epoch: [ 0] Step: [   8/  20] time: 111.1916, d_loss: 60.54660034, g_loss: 27.16829872
+Epoch: [ 0] Step: [   9/  20] time: 117.4087, d_loss: 11.62520504, g_loss: 18.79224014
+Epoch: [ 0] Step: [  10/  20] time: 123.4522, d_loss: 14.83981323, g_loss: 44.13405609
+Epoch: [ 0] Step: [  11/  20] time: 129.7192, d_loss: 63.19494629, g_loss: 0.00006507
+Epoch: [ 0] Step: [  12/  20] time: 135.9542, d_loss: 79.85924530, g_loss: 17.74182701
+Epoch: [ 0] Step: [  13/  20] time: 142.1969, d_loss: 44.20343781, g_loss: 0.00000088
+Epoch: [ 0] Step: [  14/  20] time: 148.1695, d_loss: 45.69017029, g_loss: 39.54959869
+Epoch: [ 0] Step: [  15/  20] time: 154.0329, d_loss: 25.08165359, g_loss: 58.45865631
+Epoch: [ 0] Step: [  16/  20] time: 160.1665, d_loss: 52.73548126, g_loss: 0.32456326
+Epoch: [ 0] Step: [  17/  20] time: 166.3804, d_loss: 34.15236664, g_loss: 9.77529907
+Epoch: [ 0] Step: [  18/  20] time: 172.3905, d_loss: 23.69932175, g_loss: 49.39105225
+Epoch: [ 0] Step: [  19/  20] time: 178.5233, d_loss: 51.05151749, g_loss: 1.69814360
