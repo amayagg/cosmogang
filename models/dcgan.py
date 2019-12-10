@@ -62,10 +62,10 @@ class dcgan(object):
             
             with tf.name_scope("g"):
                 self.g_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=d_logits_fake, labels=tf.ones_like(d_logits_fake)))
-                print(self.g_loss)
-         ''' 
+          
         #GEOGAN LOSS
-        
+        '''
+        '''
         with tf.name_scope("losses"):    
             with tf.name_scope("d"):
                 d_label_real, d_label_fake = self._labels()
@@ -75,11 +75,21 @@ oss"))
                 self.d_loss = self.d_loss_real + self.d_loss_fake
             
             with tf.name_scope("g"):
-                self.g_loss = -tf.reduce_mean(d_logits_fake)
-            
-            
-            
-        
+                self.g_loss = -tf.reduce_mean(d_logits_fake) 
+        ''' 
+        #GEOGAN RELATIVISTIC LOSS
+        with tf.name_scope("losses"):
+            with tf.name_scope("d"):
+                d_label_real, d_label_fake = self._labels()
+                self.d_loss_real = tf.reduce_mean(tf.losses.hinge_loss(labels=d_label_real, logits=d_logits_real - tf.reduce_mean(d_logits_fake)*tf.ones_like(d_logits_fake), weights=1.0, loss_collection="DISCRIMINATOR_LOSS", scope="discriminator_real_loss"))
+                self.d_loss_fake = tf.reduce_mean(tf.losses.hinge_loss(labels=d_label_fake, logits=d_logits_fake - tf.reduce_mean(d_logits_real)*tf.ones_like(d_logits_real), weights=1.0, loss_collection="DISCRIMINATOR_LOSS", scope="discriminator_fake_loss"))
+                self.d_loss = self.d_loss_real + self.d_loss_fake
+
+            with tf.name_scope("g"):
+                self.g_loss_real = -tf.reduce_mean(d_logits_real - tf.reduce_mean(d_logits_fake)*tf.ones_like(d_logits_fake))
+                self.g_loss_fake = -tf.reduce_mean(d_logits_fake - tf.reduce_mean(d_logits_real)*tf.ones_like(d_logits_real))
+                self.g_loss = self.g_loss_real + self.g_loss_fake 
+                
         self.d_summary = tf.summary.merge([tf.summary.histogram("prob/real", d_prob_real),
                                            tf.summary.histogram("prob/fake", d_prob_fake),
                                            tf.summary.scalar("loss/real", self.d_loss_real),
