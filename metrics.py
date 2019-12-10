@@ -133,6 +133,33 @@ def pspect(val_imgs, generator, invtransform, noise_vect_len, channel_axis, fnam
         plt.close()
     return np.sum(np.divide(np.power(gen_mean - val_mean, 2.0), val_mean))
 
+def plot_power_spectrum(validation_images):
+    k, Pk_val = batch_Pk(validation_images)
+    # k, Pk_gen = batch_Pk(gen_imgs)
+
+    val_mean = np.mean(Pk_val, axis=0)
+    # gen_mean = np.mean(Pk_gen, axis=0)
+    val_std = np.std(Pk_val, axis=0)
+    # gen_std = np.std(Pk_gen, axis=0)
+
+    plt.figure()
+    # plt.fill_between(k, gen_mean - gen_std, gen_mean + gen_std, color='red', alpha=0.4)
+    # plt.plot(k, gen_mean, 'r--')
+    plt.plot(k, val_mean, 'k:')
+    plt.plot(k, val_mean + val_std, 'k-')
+    plt.plot(k, val_mean - val_std, 'k-')
+    plt.xscale('log')
+    plt.yscale('log')
+    plt.ylabel(r'$P(k)$')
+    plt.xlabel(r'$k$')
+    plt.title('Power Spectrum')
+    # if Xterm:
+    #    plt.draw()
+    # else:
+    plt.savefig('val_power_spec', format='png')
+    plt.close()
+    return # np.sum(np.divide(np.power(gen_mean - val_mean, 2.0), val_mean))
+
 def calculate_correlation_matrix(corr_matrix):
     newmat = np.zeros(corr_matrix.shape)
     for i in range(corr_matrix.shape[0]):
@@ -143,6 +170,8 @@ def calculate_correlation_matrix(corr_matrix):
 _, Pk_val = batch_Pk(validation_set)
 # _, Pk_gen = batch_Pk(generated_images)
 # correlation matrix for validation
+
+plot_power_spectrum(validation_set)
 plt.matshow(calculate_correlation_matrix(Pk_val), cmap='RdBu', vmin=-1., vmax=1.)
 # plt.matshow(calculate_correlation_matrix(Pk_gen), cmap='RdBu', vmin=-1., vmax=1.)
 plt.colorbar()
