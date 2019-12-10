@@ -21,13 +21,15 @@ def train_dcgan(data, config):
                           z_dim=config.z_dim,
                           flip_labels=config.flip_labels,
                           data_format=config.data_format,
-                          transpose_b=config.transpose_matmul_b)
+                          transpose_b=config.transpose_matmul_b
+        )
 
         save_every_step = True if config.save_every_step == 'True' else False
 
         gan.training_graph()
         update_op = gan.optimizer(config.learning_rate, config.beta1)
 
+        #checkpoint_dir = 'models/cosmoGAN_pretrained_weights'  
         checkpoint_dir = os.path.join(config.checkpoint_dir, config.experiment)
 
         with tf.Session() as sess:
@@ -35,8 +37,8 @@ def train_dcgan(data, config):
 
             init_op = tf.global_variables_initializer()
             sess.run(init_op)
-
-            load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, step=save_every_step, counter = 47)
+            
+            load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, step=save_every_step)
             '''
             t_vars = tf.trainable_variables()
             d_vars = [var for var in t_vars if 'discriminator/' in var.name]
@@ -76,5 +78,5 @@ def train_dcgan(data, config):
                         print("Epoch: [%2d] Step: [%4d/%4d] time: %4.4f"%(epoch, idx, num_batches, time.time() - start_time))
 
                 # save a checkpoint every epoch
-                #save_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, epoch)
+                save_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, epoch)
                 sess.run(gan.increment_epoch)

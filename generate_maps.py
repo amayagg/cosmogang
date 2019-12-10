@@ -10,21 +10,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as pltcolors
 
-checkpoint_dir = 'cosmoGAN_pretrained_weights'
+#checkpoint_dir = 'models/cosmoGAN_pretrained_weights'
+checkpoint_dir = "checkpoints/geogan"
 
 with tf.Graph().as_default() as g:
     with tf.Session(graph=g) as sess:
-        gan = dcgan.dcgan(output_size=256,
-                      nd_layers=4,
-                      ng_layers=4,
-                      df_dim=64,
-                      gf_dim=64,
-                      z_dim=64,
-                      data_format="NHWC")
+        gan = dcgan.dcgan(output_size = 256,
+                          nd_layers=4,
+                          ng_layers=4,
+                          df_dim=64,
+                          gf_dim=64,
+                          z_dim=64,
+                          transpose_b = True,
+                          data_format="NHWC")
         
         gan.inference_graph()
         
-        utils.load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, counter=47)
+        utils.load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, counter = 38)
         
         z_sample = np.random.normal(size=(gan.batch_size, gan.z_dim))
         samples = sess.run(gan.G, feed_dict={gan.z: z_sample})
@@ -37,5 +39,7 @@ with tf.Graph().as_default() as g:
         # d_vars = [(sess.run(var), var.name) for var in d_vars]#if 'd_h' in var.name]
 
 norm = pltcolors.LogNorm(1e-4, samples[5].max(), clip='True')
-plt.imsave('cmap.png', np.squeeze(samples[5]), norm=norm, cmap=plt.get_cmap('Blues'))
+data = np.squeeze(samples[5])
+data[data<0.] = np.nan
+plt.imsave('maps/geogan_38_map.png', np.log(data + 0.02), cmap=plt.get_cmap('Blues'))
 # plt.imshow(np.squeeze(samples[5]), norm=norm, cmap=plt.get_cmap('Blues'));
