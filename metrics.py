@@ -166,7 +166,7 @@ def plot_power_spectrum(validation_images):
     # if Xterm:
     #    plt.draw()
     # else:
-    plt.savefig('val_power_spec', format='png')
+    plt.savefig('metrics/val_power_spec.png', format='png')
     plt.close()
     return # np.sum(np.divide(np.power(gen_mean - val_mean, 2.0), val_mean))
 

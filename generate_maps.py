@@ -26,7 +26,7 @@ with tf.Graph().as_default() as g:
         
         gan.inference_graph()
         
-        utils.load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, counter = 38)
+        utils.load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, counter = 89)
         
         z_sample = np.random.normal(size=(gan.batch_size, gan.z_dim))
         samples = sess.run(gan.G, feed_dict={gan.z: z_sample})
@@ -41,5 +41,5 @@ with tf.Graph().as_default() as g:
 norm = pltcolors.LogNorm(1e-4, samples[5].max(), clip='True')
 data = np.squeeze(samples[5])
 data[data<0.] = np.nan
-plt.imsave('maps/geogan_38_map.png', np.log(data + 0.02), cmap=plt.get_cmap('Blues'))
+plt.imsave('maps/geogan_89_map.png', np.log(data + 0.02), cmap=plt.get_cmap('Blues'))
 # plt.imshow(np.squeeze(samples[5]), norm=norm, cmap=plt.get_cmap('Blues'));

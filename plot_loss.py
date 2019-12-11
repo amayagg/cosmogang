@@ -9,7 +9,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
-infile = "output/cosmo_myExp_batchSize64_flipLabel0.010_nd4_ng4_gfdim64_dfdim64_zdim64_trialgeogan.log"
+infile = "output/geogan.log"
 
 with open(infile) as f:
     f = f.readlines()
@@ -48,4 +48,4 @@ plt.plot(d_losses, label = "D Loss")
 plt.legend()
 plt.xlabel("Epochs")
 plt.ylabel("Loss")
-plt.savefig("losses/geogan_3.png")
+plt.savefig("losses/geogan_105.png")
