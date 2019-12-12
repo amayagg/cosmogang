@@ -8,6 +8,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
+sns.set(style='ticks')
 
 infile = "output/geogan_master.log"
 
@@ -54,6 +56,12 @@ def moving_average(arr, window):
 #arr = np.arange(20)
 g_losses = moving_average(g_losses, window=100)
 d_losses = moving_average(d_losses, window=100)
+
+sns_plot_gen = sns.relplot(x="Iterations", y="Loss", kind="line", data=g_losses, legend="brief", palette="ch:2.5, .25")
+sns_plot_gen.savefig("losses/sns_generator_plot.png")
+
+sns_plot_dis = sns.relplot(x="Iterations", y="Loss", kind="line", data=d_losses, legend="brief", palette="ch:2.5,.25")
+sns_plot_dis.savefig("losses/sns_discriminator_plot.png")
 
 plt.plot(g_losses, label = "G Loss")
 plt.legend()
