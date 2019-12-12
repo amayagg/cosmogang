@@ -24,7 +24,7 @@ class dcgan(object):
         self.gen_prior = gen_prior
         self.transpose_b = transpose_b # transpose weight matrix in linear layers for (possible) better performance when running on HSW/KNL
         self.stride = 2 # this is fixed for this architecture
-
+        self.g_images = None
         self._check_architecture_consistency()
 
 
@@ -46,7 +46,8 @@ class dcgan(object):
 
         with tf.variable_scope("generator") as g_scope:
             g_images = self.generator(self.z, is_training=True)
-
+            self.g_images = g_images
+            
         with tf.variable_scope("discriminator") as d_scope:
             d_scope.reuse_variables()
             d_prob_fake, d_logits_fake = self.discriminator(g_images, is_training=True)
@@ -62,10 +63,8 @@ class dcgan(object):
             
             with tf.name_scope("g"):
                 self.g_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=d_logits_fake, labels=tf.ones_like(d_logits_fake)))
-          
+        '''  
         #GEOGAN LOSS
-        '''
-        '''
         with tf.name_scope("losses"):    
             with tf.name_scope("d"):
                 d_label_real, d_label_fake = self._labels()
@@ -75,21 +74,20 @@ oss"))
                 self.d_loss = self.d_loss_real + self.d_loss_fake
             
             with tf.name_scope("g"):
-                self.g_loss = -tf.reduce_mean(d_logits_fake) 
-        ''' 
+                self.g_loss = -tf.reduce_mean(d_logits_fake)  
         #GEOGAN RELATIVISTIC LOSS
+        '''
         with tf.name_scope("losses"):
             with tf.name_scope("d"):
                 d_label_real, d_label_fake = self._labels()
-                self.d_loss_real = tf.reduce_mean(tf.losses.hinge_loss(labels=d_label_real, logits=d_logits_real - tf.reduce_mean(d_logits_fake)*tf.ones_like(d_logits_fake), weights=1.0, loss_collection="DISCRIMINATOR_LOSS", scope="discriminator_real_loss"))
-                self.d_loss_fake = tf.reduce_mean(tf.losses.hinge_loss(labels=d_label_fake, logits=d_logits_fake - tf.reduce_mean(d_logits_real)*tf.ones_like(d_logits_real), weights=1.0, loss_collection="DISCRIMINATOR_LOSS", scope="discriminator_fake_loss"))
-                self.d_loss = self.d_loss_real + self.d_loss_fake
+                self.d_loss_real = tf.reduce_mean(tf.nn.relu(1.0 - (d_logits_real - tf.reduce_mean(d_logits_fake)*tf.ones_like(d_logits_fake))))
+                self.d_loss_fake = tf.reduce_mean(tf.nn.relu(1.0 + (d_logits_fake - tf.reduce_mean(d_logits_real)*tf.ones_like(d_logits_real))))  
+                self.d_loss = (self.d_loss_real + self.d_loss_fake)/2
 
             with tf.name_scope("g"):
-                self.g_loss_real = -tf.reduce_mean(d_logits_real - tf.reduce_mean(d_logits_fake)*tf.ones_like(d_logits_fake))
-                self.g_loss_fake = -tf.reduce_mean(d_logits_fake - tf.reduce_mean(d_logits_real)*tf.ones_like(d_logits_real))
-                self.g_loss = self.g_loss_real + self.g_loss_fake 
-                
+                self.g_loss = tf.reduce_mean(tf.nn.relu(1.0 + (d_logits_real - tf.reduce_mean(d_logits_fake)*tf.reduce_mean(d_logits_fake))))/2 + tf.reduce_mean(tf.nn.relu(1.0 - (d_logits_fake - tf.reduce_mean(d_logits_real)*tf.reduce_mean(d_logits_real))))/2 
+           
+        '''
         self.d_summary = tf.summary.merge([tf.summary.histogram("prob/real", d_prob_real),
                                            tf.summary.histogram("prob/fake", d_prob_fake),
                                            tf.summary.scalar("loss/real", self.d_loss_real),
@@ -198,6 +196,23 @@ oss"))
             chain = tf.contrib.layers.batch_norm(chain, is_training=is_training, scope='bn%i'%h, **self.batchnorm_kwargs)
             chain = lrelu(chain)
 
+
+        ### MINIBATCH DISC ###
+        chain = tf.reshape(chain, [self.batch_size, -1])
+        num_kernels = 256
+        kernel_dim = 5
+        x = linear(chain, num_kernels * kernel_dim)
+        activation = tf.reshape(x, (-1, num_kernels, kernel_dim))
+        diffs = tf.expand_dims(activation, 3) - tf.expand_dims(tf.transpose(activation, [1,2,0]), 0)
+        abs_diffs = tf.reduce_sum(tf.abs(diffs), 2)
+        minibatch_features = tf.reduce_sum(tf.exp(-abs_diffs), 2)
+        disc_output = tf.concat([chain, minibatch_features], 1)
+
+        chain = tf.reshape(disc_output, [self.batch_size, 16, 16, -1])
+        chain = conv2d(chain, self.df_dim, self.data_format, name = 'h%i_conv'%(h+1))
+        chain = tf.contrib.layers.batch_norm(chain, is_training = is_training, scope = 'bn%i'%(h+1), **self.batchnorm_kwargs)
+        chain = lrelu(chain)
+        
         # h1 = linear(reshape(h0))
         hn = linear(tf.reshape(chain, [self.batch_size, -1]), 1, 'h%i_lin'%self.nd_layers, transpose_b=self.transpose_b)
 

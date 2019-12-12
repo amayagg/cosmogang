@@ -3,15 +3,31 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm, PowerNorm, Normalize
-
+from sklearn.decomposition import PCA
 #import tensorflow as tf
 #from models import dcgan, utils
 from scipy import fftpack
-
+import pandas as pd
 
 checkpoint_dir = 'checkpoints/vanilla'
 validation_set_location = 'data/dev.npy' # TODO (team): replace with validation set link
 
+def generate_scatter():
+    data = np.load("data/dev.npy", mmap_mode = 'r')
+    data = np.reshape(data, [data.shape[0], -1])
+    pca = PCA(n_components = 2)
+    principalComponents = pca.fit_transform(data)
+    principalDf = pd.DataFrame(data = principalComponents, columns = ['PC1', 'PC2'])
+    pc1 = principalDf['PC1']
+    pc2 = principalDf['PC2']
+    plt.scatter(pc1, pc2, alpha = 0.5)
+    plt.title("Validation PCA")
+    plt.xlabel('PC 1')
+    plt.ylabel('PC 2')
+    plt.savefig("val_pca.png")
+
+generate_scatter()
+exit()
 #with tf.Graph().as_default() as g:
    # with tf.Session(graph=g) as sess:
         #gan = dcgan.dcgan(output_size=256,

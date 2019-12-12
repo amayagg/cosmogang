@@ -38,7 +38,7 @@ def train_dcgan(data, config):
             init_op = tf.global_variables_initializer()
             sess.run(init_op)
             
-            load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, step=save_every_step)
+            load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, step=save_every_step, counter = 19)
             '''
             t_vars = tf.trainable_variables()
             d_vars = [var for var in t_vars if 'discriminator/' in var.name]

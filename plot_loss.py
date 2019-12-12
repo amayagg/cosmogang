@@ -9,7 +9,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+
 sns.set()
+import pandas as pd 
 
 infile = "output/geogan_master.log"
 
@@ -60,21 +62,31 @@ d_losses = moving_average(d_losses, window=100)
 g_losses_df = pd.DataFrame(g_losses.flatten())
 d_losses_df = pd.DataFrame(d_losses.flatten())
 
-sns_plot_gen = sns.relplot(x="Iterations", y="Loss", kind="line", data=g_losses_df, legend="brief", palette=sns.color_palette(8, start=7))
+sns_plot_gen = sns.relplot(kind="line", data=g_losses_df, legend="brief", palette=sns.cubehelix_palette(start=0, n_colors = 1))
 sns_plot_gen.savefig("losses/sns_generator_plot.png")
 
-sns_plot_dis = sns.relplot(x="Iterations", y="Loss", kind="line", data=d_losses_df, legend="brief", palette=sns.color_palette("cubehelix", 8))
-sns_plot_dis.savefig("losses/sns_discriminator_plot.png")
+sns_plot_dis = sns.relplot(kind="line", data=d_losses_df, legend="brief", palette=sns.cubehelix_palette(start = 2.8, n_colors = 1))
+sns_plot_gen.savefig("losses/sns_discriminator_plot.png")
 
+
+#g_losses_df = pd.DataFrame(data=g_losses.flatten())
+#d_losses_df = pd.DataFrame(data=d_losses.flatten())
+'''
+sns_plot_gen = sns.relplot(kind="line", data=g_losses_df, legend="brief", palette="ch:2.5, .25")
+sns_plot_gen.savefig("losses/sns_generator_plot.png")
+
+sns_plot_dis = sns.relplot( kind="line", data=d_losses_df, legend="brief", palette="ch:1.2, .12")
+sns_plot_dis.savefig("losses/sns_discriminator_plot.png")
+'''
 plt.plot(g_losses, label = "G Loss")
 plt.legend()
-plt.xlabel("Iterations")
+plt.xlabel("Steps")
 plt.ylabel("Loss")
 plt.savefig("losses/geogan_gen_loss.png")
 
 plt.figure()
-plt.plot(d_losses, label = "D Loss")
+plt.plot(d_losses, label = "D Loss", color = "green")
 plt.legend()
-plt.xlabel("Iterations")
+plt.xlabel("Steps")
 plt.ylabel("Loss")
 plt.savefig("losses/geogan_dic_loss.png")
