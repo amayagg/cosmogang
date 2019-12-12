@@ -9,7 +9,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-sns.set(style='ticks')
+sns.set()
 
 infile = "output/geogan_master.log"
 
@@ -57,10 +57,13 @@ def moving_average(arr, window):
 g_losses = moving_average(g_losses, window=100)
 d_losses = moving_average(d_losses, window=100)
 
-sns_plot_gen = sns.relplot(x="Iterations", y="Loss", kind="line", data=g_losses, legend="brief", palette="ch:2.5, .25")
+g_losses_df = pd.DataFrame(g_losses.flatten())
+d_losses_df = pd.DataFrame(d_losses.flatten())
+
+sns_plot_gen = sns.relplot(x="Iterations", y="Loss", kind="line", data=g_losses_df, legend="brief", palette=sns.color_palette(8, start=7))
 sns_plot_gen.savefig("losses/sns_generator_plot.png")
 
-sns_plot_dis = sns.relplot(x="Iterations", y="Loss", kind="line", data=d_losses, legend="brief", palette="ch:2.5,.25")
+sns_plot_dis = sns.relplot(x="Iterations", y="Loss", kind="line", data=d_losses_df, legend="brief", palette=sns.color_palette("cubehelix", 8))
 sns_plot_dis.savefig("losses/sns_discriminator_plot.png")
 
 plt.plot(g_losses, label = "G Loss")
