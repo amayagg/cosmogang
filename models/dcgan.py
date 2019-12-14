@@ -198,6 +198,7 @@ oss"))
 
 
         ### MINIBATCH DISC ###
+        '''
         chain = tf.reshape(chain, [self.batch_size, -1])
         num_kernels = 256
         kernel_dim = 5
@@ -212,7 +213,7 @@ oss"))
         chain = conv2d(chain, self.df_dim, self.data_format, name = 'h%i_conv'%(h+1))
         chain = tf.contrib.layers.batch_norm(chain, is_training = is_training, scope = 'bn%i'%(h+1), **self.batchnorm_kwargs)
         chain = lrelu(chain)
-        
+        '''
         # h1 = linear(reshape(h0))
         hn = linear(tf.reshape(chain, [self.batch_size, -1]), 1, 'h%i_lin'%self.nd_layers, transpose_b=self.transpose_b)
 
