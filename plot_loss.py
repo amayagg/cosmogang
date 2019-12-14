@@ -58,7 +58,7 @@ def moving_average(arr, window):
 #arr = np.arange(20)
 g_losses = moving_average(g_losses, window=100)
 d_losses = moving_average(d_losses, window=100)
-
+'''
 g_losses_df = pd.DataFrame(g_losses.flatten())
 d_losses_df = pd.DataFrame(d_losses.flatten())
 
@@ -67,7 +67,7 @@ sns_plot_gen.savefig("losses/sns_generator_plot.png")
 
 sns_plot_dis = sns.relplot(kind="line", data=d_losses_df, legend="brief", palette=sns.cubehelix_palette(start = 2.8, n_colors = 1))
 sns_plot_gen.savefig("losses/sns_discriminator_plot.png")
-
+'''
 
 #g_losses_df = pd.DataFrame(data=g_losses.flatten())
 #d_losses_df = pd.DataFrame(data=d_losses.flatten())

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as pltcolors
 
 #checkpoint_dir = 'models/cosmoGAN_pretrained_weights'
-checkpoint_dir = "checkpoints/minibatch"
+checkpoint_dir = "checkpoints/geogan"
 
 with tf.Graph().as_default() as g:
     with tf.Session(graph=g) as sess:
@@ -26,7 +26,7 @@ with tf.Graph().as_default() as g:
         
         gan.inference_graph()
         
-        utils.load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, counter = 20)
+        utils.load_checkpoint(sess, gan.saver, 'dcgan', checkpoint_dir, counter = 183)
         
         z_sample = np.random.normal(size=(gan.batch_size, gan.z_dim))
         samples = sess.run(gan.G, feed_dict={gan.z: z_sample})
@@ -41,5 +41,5 @@ with tf.Graph().as_default() as g:
 norm = pltcolors.LogNorm(1e-4, samples[5].max(), clip='True')
 data = np.squeeze(samples[5])
 data[data<0.] = np.nan
-plt.imsave('maps/minibatch_20_map.png', np.log(data + 0.02), cmap=plt.get_cmap('Blues'))
+plt.imsave('maps/minibatch_183_map.png', np.log(data + 0.02), cmap=plt.get_cmap('Blues'))
 # plt.imshow(np.squeeze(samples[5]), norm=norm, cmap=plt.get_cmap('Blues'));
